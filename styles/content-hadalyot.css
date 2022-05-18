@@ -1,0 +1,155 @@
+﻿body {
+
+}
+
+main > article > section{
+    margin-right: 180px;
+}
+
+section > section{
+    margin-bottom: 150px;
+}
+
+/*Headers & Paragraphs*/
+
+h2{
+    margin-top: 150px;
+    margin-bottom: 25px;
+    font-family: Rubik Bold;
+    font-size: 36px;
+}
+
+h3{
+    font-family: Rubik Bold;
+    font-size: 24px;
+}
+
+p {
+    font-family: Rubik;
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
+p.bigger{
+    font-family: Rubik;
+    font-size: 36px;
+    width: 650px;
+}
+
+
+/*Instructions List*/
+
+main ol{
+    margin-top: 200px;
+    margin-right: -50px;
+    counter-reset: my-awesome-counter;
+    list-style: none;
+}
+
+    main ol li {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        margin-bottom: 35px;
+        font-size: 24px;
+        line-height: 1.5;
+        counter-increment: my-awesome-counter;
+    }
+
+        main ol li:before {
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+            margin-left: 50px;
+            font-family: Rubik Bold;
+            font-size: 36px;
+            content: counter(my-awesome-counter);
+        }    
+
+
+
+/*Miscellaneous*/
+.did_you_know{
+    background-image: url("../images/general/didyouknow.png");
+    width: 872px;
+    height: 82px;
+    line-height: 3.0;
+    font-size: 24px;
+    text-indent: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+/*gallary*/
+
+#gallery {
+    width: 855px;
+    height: 720px;
+    background-image: url('../images/gallary/רקע.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.garrow {
+    width: 85px;
+    height: 130px;
+    background-color: transparent;
+    border: hidden;
+    color: transparent;
+    position: relative;
+    margin-top: 260px;
+    cursor: pointer;
+}
+
+#right_arrow {
+    background-image: url('../images/gallary/רגיל ימין.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    margin-right: 60px;
+}
+
+#left_arrow {
+    background-image: url('../images/gallary/רגיל שמאל.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    margin-left: 60px;
+}
+
+    #left_arrow:hover {
+        background-image: url('../images/gallary/האוור.png');
+    }
+
+#right_arrow:hover {
+    background-image: url('../images/gallary/האוור ימין.png');
+}
+
+#content {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    margin-right: 200px;
+    margin-top: 90px;
+}
+
+#imgFromJs {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+#galleryP {
+    position: absolute;
+    margin-right: 70px;
+    margin-top: 560px;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 1.5;
+    width: 730px;
+}

@@ -1,0 +1,427 @@
+﻿.test {
+    position: absolute;
+    width: 1280px;
+    height: 900px;
+    border: 1px solid black;
+    z-index: -1;
+}
+
+#test2 {
+    top: 900px;
+}
+
+#test3 {
+    top: 1800px;
+}
+
+#test4 {
+    top: 2700px;
+}
+
+#test5 {
+    top: 3600px;
+}
+
+/*Fonts*/
+
+@font-face{
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-VariableFont_wght.eot');
+    src: url('../fonts/Rubik-VariableFont_wght.eot?#iefix') format('embedded-opentype') , url('../fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Medium';
+    src: url("../fonts/Variants/Rubik-Medium.eot");
+    src: url("../fonts/Variants/Rubik-Medium.eot?#iefix") format('embedded-opentype'), url("../fonts/Variants/Rubik-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Light';
+    src: url("../fonts/Variants/Rubik-Light.eot");
+    src: url("../fonts/Variants/Rubik-Light.eot?#iefix") format('embedded-opentype'), url("../fonts/Variants/Rubik-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url("../fonts/Variants/Rubik-Bold.eot");
+    src: url("../fonts/Variants/Rubik-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/Variants/Rubik-Bold.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: 'Rubik Black';
+    src: url("../fonts/Variants/Rubik-Black.eot");
+    src: url("../fonts/Variants/Rubik-Black.eot?#iefix") format('embedded-opentype') , url("../fonts/Variants/Rubik-Black.ttf") format('truetype');
+}
+
+/*Basic Settings*/
+
+body {
+    direction: rtl;
+    background-image: url("../images/background.png");
+}
+
+#container {
+    width: 1280px;    
+    margin: 0 auto;
+}
+
+.notActive{
+    cursor: not-allowed;
+    color: grey;
+}
+
+h1,h2,h3,p,div,li,a{
+    font-family: Rubik;
+}
+
+/*Top Toolbar*/
+/*Note: for menu and search icon graphics, please look in the Icon category*/
+
+#top_toolbar {
+    display: block;
+    position: relative;
+    background-image: url("../images/general/top_toolbar.png");
+    width: 1283px;
+    height: 131px;
+    margin: 0 auto;
+}
+
+    #top_toolbar nav {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin-top: 15px;
+        float: right;
+    }
+
+/*Navigation: Skip to Content*/
+
+    #toolbar_skiptocontent {
+        display: inline-block;
+        position: relative;
+        float: right;
+        width: 95px;
+        height: 94px;
+    }
+
+#toolbar_skiptocontent a {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+    #toolbar_skiptocontent a:focus, #toolbar_skiptocontent a:active {
+        background-image: url("../images/general/skiptocontent.png");
+        width: 95px;
+        height: 94px;
+        line-height: 2;
+        font-size: 19px;
+        overflow: visible;
+    }
+
+#top_toolbar #menu_button{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/*Signpost: logo, sitename, and slogan*/
+
+#signpost{
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+    margin-right: 250px;
+}
+
+#toolbar_logo {
+    position: relative;
+    display: inline-block;
+    background-image: url("../images/general/toolbar_logo.png");
+    width: 79px;
+    height: 90px;
+}
+
+#sitename {
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    text-align: center;
+    color: #315E1A;
+}
+
+#sitename a {
+    font-family: 'Rubik Bold';
+    font-size: 36px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+    #sitename a:visited {
+        color: #315E1A;
+    }
+
+    #signpost p {
+        font-family: Rubik Light;
+        font-size: 21px;
+    }
+
+#top_toolbar #search_button {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+/*Breadcrumbs*/
+
+#breadcrumbs {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#breadcrumbs ol{
+    margin-right: 110px;
+}
+
+#breadcrumbs li{
+    display: inline;
+    font-size: 21px;
+}
+#breadcrumbs li+li::before{
+    content: ">";
+}
+
+/*Header*/
+
+main h1{
+    font-family: 'Rubik Bold';
+    font-size: 44px;
+}
+
+/*Buttons*/
+
+.button, .big_button, .arrow_button , .arrow_button_small{
+    color: #315E1A;
+    text-decoration: none;
+    font-weight: 400;
+    background-repeat: no-repeat;
+}
+
+/*Basic Button*/
+.button {
+    background-image: url("../images/general/button_notpressed.png");
+    width: 213px;
+    height: 54px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+
+    .button.active:hover, .button.active:focus {
+        background-image: url("../images/general/button_pressed.png");
+        color: #F5E467;
+    }
+
+/*Big Button*/
+.big_button{
+    background-image: url("../images/general/big_button_notpressed.png");
+    width: 260px;
+    height: 259px;
+    text-align: center;
+    display: inline-block;
+}
+
+    .big_button.active:hover , .big_button.active:focus{
+        background-image: url("../images/general/big_button_pressed.png");
+        color: #F5E467;
+    }
+
+/*Arrow*/
+
+.arrow{
+    background-image: url("../images/general/arrow_notpressed.png");
+    display: block;
+    width: 135px;
+    height: 85px;
+}
+
+    .arrow:hover , .arrow:focus{
+        background-image: url("../images/general/arrow_pressed.png");
+    }
+
+.arrow.left{
+    transform: rotate(-90deg);
+}
+
+.arrow.right{
+    transform: rotate(90deg);
+}
+
+.arrow.down{
+    transform: rotate(180deg);
+}
+
+/*Arrow Button Big*/
+
+.arrow_button{
+    display: inline-block;
+    background-image: url("../images/general/arrowbutton_big_notpressed.png");
+    width: 248px;
+    height: 67px;
+    line-height: 2.3;
+    font-size: 27px;
+    text-indent: 30px;
+}
+
+    .arrow_button:hover, .arrow_button:focus {
+        background-image: url("../images/general/arrowbutton_big_pressed.png");
+        color: #F5E467;
+    }
+
+/*Small Arrow Button*/
+
+.arrow_button_small {
+    display: inline-block;
+    background-image: url("../images/general/arrowbutton_small_notpressed.png");
+    width: 209px;
+    height: 57px;
+    line-height: 2.3;
+    font-size: 23px;
+    text-indent: 20px;
+    text-decoration: none;
+}
+
+    .arrow_button_small:hover, .arrow_button_small:focus {
+        background-image: url("../images/general/arrowbutton_small_pressed.png");
+        color: #F5E467;
+    }
+
+/*Menu*/
+
+#menu_button {
+    background: none;
+    background-image: url("../images/general/menu_icon.png");
+    width: 80px;
+    height: 67px;
+    border: none;
+    cursor: pointer;
+}
+
+    #menu_button:hover , #menu_button:focus{
+        background-image: url("../images/general/menu_icon_pressed.png");
+    }
+
+/*Menu Exit (X)*/
+
+#menu_exit_button {
+    background-image: url("../images/general/x_notpressed.png");
+    width: 43px;
+    height: 42px;
+    border: none;
+}
+
+    #menu_exit_button:hover , #menu_exit_button:focus{
+        background-image: url("../images/general/x_pressed.png");
+    }
+
+/*Search*/
+
+#search_button{
+    display: block;
+    background-image: url("../images/general/search_icon.png");
+    width: 46px;
+    height: 57px;
+}
+
+    #search_button:hover , #search_button:focus{
+        background-image: url("../images/general/search_icon_pressed.png");
+    }
+
+/*Social Icons*/
+#facebook , #instagram , #whatsapp{
+    width: 88px;
+    height: 88px;
+    display: block;
+}
+/*Facebook*/
+#facebook{
+    background-image: url("../images/general/icon_facebook_notpressed.png");
+}
+
+#facebook:hover , #facebook:focus{
+    background-image: url("../images/general/icon_facebook_pressed.png");
+}
+
+/*Instagram*/
+#instagram{
+    background-image: url("../images/general/icon_instagram_notpressed.png");
+}
+
+#instagram:hover , #instagram:focus{
+    background-image: url("../images/general/icon_instagram_pressed.png");
+}
+
+/*Whatsapp*/
+#whatsapp{
+    background-image: url("../images/general/icon_whatsapp_notpressed.png");
+}
+
+#whatsapp:hover , #whatsapp:focus{
+    background-image: url("../images/general/icon_whatsapp_pressed.png");
+}
+
+/*Footer*/
+
+/*Footer Toolbar*/
+
+#footer_toolbar{
+    display: block;
+    position: relative;
+    background-image: url("../images/general/footer.png");
+    width: 1285px;
+    height: 282px;
+}
+
+    #footer_toolbar .footer_text{
+        display: inline-block;
+        position: relative;
+        font-size: 24px;
+        margin-top: 35px;
+    }
+
+    #footer_toolbar h3{
+        font-family: 'Rubik Bold';
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+        #footer_toolbar .footer_text ul{
+            list-style: none;
+        }
+
+#footer_left {
+    float: left;
+    margin-left: 100px;
+}
+
+#footer_right {
+    float: right;
+    margin-right: 100px;
+}
+
+.footer_links {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.footer_icon {
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+}
